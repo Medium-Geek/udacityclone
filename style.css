@@ -1,0 +1,20 @@
+#head-jumbo {
+    background: url("/Images/man_at_pc.jpg") center 76% / cover no-repeat;
+}
+ul > .list-inline-item {
+    width: auto;
+    font-size: 1.1rem;
+}
+/* .partner-logos {
+    height: 44px;
+} */
+img[src$= ".svg"] {
+    height: 50px;
+    width: 50px;
+}
+.jumbotron-text {
+    width: 75%;
+}
+h1 + .jumbotron-text {
+    margin-left: 20px;
+}
