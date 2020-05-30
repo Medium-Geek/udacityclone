@@ -1,5 +1,25 @@
 #head-jumbo {
     background: url("/Images/man_at_pc.jpg") center 76% / cover no-repeat;
+    border-radius: 0%;
+}
+body > .head-container-div {
+    /* margin: 0px 0px 0px 0px; */
+    padding: 0px 0px;
+}
+.navbar {
+    height: 96px;
+}
+.navbar-brand {
+    width: 20%;
+}
+#navbarSupportedContent {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    /* padding-left: 20%; */
+}
+.navbar-bar {
+    width: 100%;
 }
 ul > .list-inline-item {
     width: auto;
@@ -12,9 +32,23 @@ img[src$= ".svg"] {
     height: 50px;
     width: 50px;
 }
-.jumbotron-text {
+.jumbo-text {
     width: 75%;
 }
-h1 + .jumbotron-text {
+h1 + .jumbo-text {
     margin-left: 20px;
+}
+td, th {
+    height: 40px;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+tr > td {
+    background-color: rgba(167, 228, 233, 0.116);
+}
+.row-tick {
+    background-color: rgb(2, 179, 228);
+}
+.row-x {
+    background-color: rgb(187, 185, 185);
 }

@@ -11,13 +11,71 @@
 </head>
 <body>
 
-    <div class= "container-fluid d-flex justify-content-start">
-        <div class="jumbotron col-sm-7 d-inline p-3 text-white" id="head-jumbo">
+    <!-- TODO @Medium-Geek: Properly align and space navbar items. Add brand logo and work on the view in collapsed mode. -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> 
+        
+        <a class="navbar-brand justify-content-sm-center" href="#">Navbar</a>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- The navbar links were originally a ul with class of navbar-nav. Because they were all grouped together in the ul, they couldn't be spaced separately using flexbox. Giving these spans the navbar-nav class makes them preserve the character of links they had before. -->
+            <span class="navbar-nav nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </span>
+            <span class="navbar-nav nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </span>
+            <span class="navbar-nav nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </span>
+            <span class="navbar-nav nav-item">
+                <a class="nav-link" href="#">Link</a>
+
+                <button class="btn btn-md bg-primary text-white">
+                    <a href="#"></a>
+                    Get Started
+                </button>
+            </span>
+        </div>
+      </nav>
+
+
+
+
+    <div class= "head-container-div container-fluid d-flex justify-content-start flex-sm-column flex-lg-row">
+        <!-- Started out with this next div as a jumbotron but ended up overriding all it's functionality to get where i wanted so i just removed the jumbotron class. -->
+        <div class="col-lg-7 col-sm-12 d-inline text-white" id="head-jumbo">
             <h2 class="display-5">Bootcamp Quality at 1/10 of the Cost</h2>
-            <p class="jumbotron-text">Udacity is the world’s fastest, most efficient way to master the skills tech companies want. 100% online, part-time & self-paced.</p>
+            <p class="jumbo-text">Udacity is the world’s fastest, most efficient way to master the skills tech companies want. 100% online, part-time & self-paced.</p>
             <a class="btn btn-primary btn-lg my-2 px-5 text-uppercase" href="#" role="button">Learn more</a>
             <div>
-                <p class="jumbotron-text">Industry leading programs built and recognized by top companies worldwide</p>
+                <p class="jumbo-text">Industry leading programs built and recognized by top companies worldwide</p>
                 <ul class="d-flex list-inline align-items-end mb-0">
     
                     <li class="mx-4">
@@ -33,62 +91,62 @@
                 </ul>
             </div>
         </div> 
-        <div class="container col-sm-5 bg-none">
-            <h3 class="font-weight-normal">Only at Udacity: <b>Job-Ready Skills</b></h3>
-            <!-- TODO: Use flexbox to make the table items spread out while the table fills the <div> -->
-            <table class="container-fluid d-flex">
-                <tr>
+        <div class="container col-lg-5 col-sm-12 p-sm-4 pl-0 ">
+            <h3 class="font-weight-normal text-center">Only at Udacity: <b>Job-Ready Skills</b></h3>
+
+            <table class="container-fluid mt-3">
+                <tr class="">
                     <th></th>
-                    <th class="text-center text-white bg-primary">UDACITY</th>
-                    <th class="text-center text-white bg-secondary">OTHERS</th>
+                    <th class="text-center text-white row-tick">UDACITY</th>
+                    <th class="text-center text-white row-x">OTHERS</th>
                 </tr>
                 <tr>
-                    <td>Learn by doing</td>
-                    <td class="bg-primary text-center">
+                    <td class="table-item">Learn by doing</td>
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
                 <tr>
-                    <td>Practitioner-level skills</td>
-                    <td class="bg-primary text-center">
+                    <td class="table-item">Practitioner-level skills</td>
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
                 <tr>
-                    <td>Job-focused content</td>
-                    <td class="bg-primary text-center">
+                    <td class="table-item">Job-focused content</td>
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
                 <tr>
                     <td>Real human help</td>
-                    <td class="bg-primary text-center">
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
                 <tr>
                     <td>Personalized code reviews</td>
-                    <td class="bg-primary text-center">
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
                 <tr>
                     <td>Real-life projects</td>
-                    <td class="bg-primary text-center">
+                    <td class="text-center row-tick">
                         <i class="fas fa-check text-white"></i>
                     </td>
-                    <td class="bg-secondary text-center text-white">X</td>
+                    <td class="text-center text-white row-x">X</td>
                 </tr>
             </table>
         </div> 
     </div>
         
-    <h2>Explore our schools to find your perfect program</h2>
+    <h2 class="text-center my-4">Explore our schools to find your perfect program</h2>
 
         <ul class="d-flex list-inline text-uppercase justify-content-between px-5">
             <li class="list-inline-item">Data Science</li>
@@ -99,5 +157,13 @@
             <li class="list-inline-item"> Business</li>
         </ul>
     
+
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
