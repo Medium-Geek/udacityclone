@@ -12,16 +12,38 @@
 <body>
 
     <!-- TODO @Medium-Geek: Properly align and space navbar items. Add brand logo and work on the view in collapsed mode. -->
+    <header id="navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button> 
         
-        <a class="navbar-brand justify-content-sm-center" href="#">Navbar</a>
+        <div class="navbar-brand">
+            <a class="justify-content-sm-center" href="#"><i class="fab fa-uniregistry"></i>&nbsp;</a>
+            <a class="justify-content-sm-center text-dark" href="#">UDACITY</a>
+        </div>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- The navbar links were originally a ul with class of navbar-nav. Because they were all grouped together in the ul, they couldn't be spaced separately using flexbox. Giving these spans the navbar-nav class makes them preserve the character of links they had before. -->
-            <span class="navbar-nav nav-item active dropdown">
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="navbar-nav nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
                   </a>
@@ -31,8 +53,8 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-            </span>
-            <span class="navbar-nav nav-item dropdown">
+            </div>
+            <div class="navbar-nav nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
                   </a>
@@ -42,8 +64,8 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Something else here</a>
                   </div>
-            </span>
-            <span class="navbar-nav nav-item dropdown">
+            </div>
+            <div class="navbar-nav nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
@@ -53,28 +75,29 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
-            </span>
-            <span class="navbar-nav nav-item">
-                <a class="nav-link" href="#">Link</a>
+            </div>
+
+            <div class="navbar-nav nav-item">
+                <a class="nav-link" id="last-link" href="#">Sign In</a>
 
                 <button class="btn btn-md bg-primary text-white">
                     <a href="#"></a>
                     Get Started
                 </button>
-            </span>
+            </div>
         </div>
       </nav>
+    </header>
 
 
 
-
-    <div class= "head-container-div container-fluid d-flex justify-content-start flex-sm-column flex-lg-row">
+    <section class= "head-container-div container-fluid d-flex justify-content-start flex-sm-column flex-lg-row">
         <!-- Started out with this next div as a jumbotron but ended up overriding all it's functionality to get where i wanted so i just removed the jumbotron class. -->
         <div class="col-lg-7 col-sm-12 d-inline text-white" id="head-jumbo">
             <h2 class="display-5">Bootcamp Quality at 1/10 of the Cost</h2>
             <p class="jumbo-text">Udacity is the world’s fastest, most efficient way to master the skills tech companies want. 100% online, part-time & self-paced.</p>
             <a class="btn btn-primary btn-lg my-2 px-5 text-uppercase" href="#" role="button">Learn more</a>
-            <div>
+            <div id="recognized-companies">
                 <p class="jumbo-text">Industry leading programs built and recognized by top companies worldwide</p>
                 <ul class="d-flex list-inline align-items-end mb-0">
     
@@ -91,7 +114,7 @@
                 </ul>
             </div>
         </div> 
-        <div class="container col-lg-5 col-sm-12 p-sm-4 pl-0 ">
+        <div class="container col-lg-5 col-sm-12 p-sm-4 p-xl-0 ">
             <h3 class="font-weight-normal text-center">Only at Udacity: <b>Job-Ready Skills</b></h3>
 
             <table class="container-fluid mt-3">
@@ -144,7 +167,7 @@
                 </tr>
             </table>
         </div> 
-    </div>
+    </section>
         
     <h2 class="text-center my-4">Explore our schools to find your perfect program</h2>
 
