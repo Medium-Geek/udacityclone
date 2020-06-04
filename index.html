@@ -5,27 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/607f16dd5c.js" crossorigin="anonymous"></script>
 
     <title>Learn the Latest Tech Skills; Advance Your Career | Udacity</title>
 </head>
 <body>
 
-    <!-- TODO @Medium-Geek: Properly align and space navbar items. Add brand logo and work on the view in collapsed mode. -->
     <header id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <nav class="my-navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button> 
-        
-        <div class="navbar-brand">
-            <a class="justify-content-sm-center" href="#"><i class="fab fa-uniregistry"></i>&nbsp;</a>
+        <!-- TODO: Make logo show alone in center of navbar when collapsed. -->
+        <div class="justify-content-sm-center justify-content-lg-start" id="navbar-brand">
+            <a class="justify-content-sm-center" href="#">
+            <svg height="30" viewBox="0 0 30 30" width="30"><g fill="none" fill-rule="evenodd"><path d="M57.6 17.239187c0 2.546698-2.085517 4.407747-4.965517 4.407747-2.88 0-4.965517-1.86105-4.965517-4.407747V7.835994H45.68276v9.501143c0 3.330298 2.88 6.170846 6.951723 6.170846 4.071724 0 6.951724-2.938498 6.951724-6.170846V7.835994H57.6v9.403193zm16.286897-9.403193h-5.36276v15.67199h5.36276c4.468965 0 7.547586-3.03645 7.547586-7.835996 0-4.701596-3.07862-7.835994-7.547586-7.835994zm-.19862 13.71299h-3.177932V9.794994h3.17793c3.376553 0 5.76 2.252847 5.76 5.876994 0 3.917998-2.482757 5.779046-5.76 5.876996zm43.49793.29385c-3.575172 0-5.95862-2.644648-5.95862-6.170846 0-3.526197 2.482758-6.072895 5.95862-6.072895 2.78069 0 4.468966 1.5672 4.468966 1.5672l.794483-1.3713s-1.787587-1.86105-5.46207-1.86105c-4.766896 0-7.746206 3.526198-7.746206 7.738045 0 4.309797 3.07862 7.933945 7.944827 7.933945 3.773793 0 5.66069-2.5467 5.66069-2.5467l-1.092414-1.175398c-.09931-.09795-1.588965 1.959-4.568276 1.959zm14.896553-14.00684h1.986206v15.67199h-1.986207zm10.924137 1.959h4.965517v13.71299h1.986207V9.794994h4.96552v-1.959H143.0069m30.587583 0l-4.766896 7.150344-4.866207-7.150347h-2.085518l5.95862 8.717546v6.954445h1.986208v-6.954444l5.85931-8.71754m-81.434482 0l-6.157242 15.67199h1.986207l1.688276-4.5057 6.45517-1.3713 2.18483 5.876998h1.986203l-6.05793-15.67199h-2.085518zm-1.886897 9.305242l2.97931-7.248294h.099315L97.92 16.063788l-5.56138 1.07745z" fill="#2E3D49" id="wordmark"></path><path d="M29 .5l1 .5v13c0 5.551887-2.8897 8.695692-5.995216 10.099885L24.0094 24.1l-7.620963 4.388562c-.05877.03456-.11776.068527-.176957.101902l-.08642.049764.001806-.00254C14.48289 29.545895 12.684682 30 11 30 6 30 0 26 0 18V6l2 1v11c0 8 6 10 9 10 1.858706 0 4.86901-.76773 6.89043-3.254517C14.181726 23.872636 10 20.678703 10 14V2.2L2 7 0 6l10-6 1 .5 1 .5v13c0 6.939958 4.515283 8.612086 7.017542 8.933368C19.625786 21.62159 20 19.997902 20 18V5l2 1v12c0 1.852645-.321777 3.49077-.878395 4.91438C23.648223 22.549217 28 20.813144 28 14V2.25L22 6l-2-1 8-5 1 .5z" fill="#02B3E4" id="mark"></path></g></svg>
+        </a>
             <a class="justify-content-sm-center text-dark" href="#">UDACITY</a>
         </div>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- The navbar links were originally a ul with class of navbar-nav. Because they were all grouped together in the ul, they couldn't be spaced separately using flexbox. Giving these spans the navbar-nav class makes them preserve the character of links they had before. -->
             
+        <ul class="navbar-nav" id="nav-links">
+            <li class="nav-item dropdown">
+                <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Programs 
+                    <svg class="bi bi-chevron-down" width="0.8em" height="0.9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Careers 
+                    <svg class="bi bi-chevron-down" width="0.8em" height="0.9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>   
+            <li class="nav-item dropdown">
+                <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    For Enterprise 
+                    <svg class="bi bi-chevron-down" width="0.8em" height="0.9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+            <li class="nav-item">
+                <div class="sign-in" id="nav-divider"></div>
+            </li>
+            <!-- Creating a "sign-in" class so i can select the last two nav links and set up their margins and padding independently of the others. -->
+            <li class="nav-item">
+                <a class="sign-in" href="#">Sign In</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-md text-white sign-in" id="nav-button">
+                    <a href="#"></a> Get Started
+                </button>
+            </li>
+        </ul>
         
         
         
@@ -42,10 +100,12 @@
         
         
         
-        
-        <div class="navbar-nav nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+        <!-- <div class="navbar-nav nav-item active dropdown">
+                <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown 
+                    <svg class="bi bi-chevron-down" width="0.8em" height="0.9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -55,8 +115,11 @@
                   </div>
             </div>
             <div class="navbar-nav nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
+                <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown 
+                    <svg class="bi bi-chevron-down" width="0.8em" height="0.9em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                    </svg>
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -66,9 +129,12 @@
                   </div>
             </div>
             <div class="navbar-nav nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
+              <a class="nav-menu" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                Dropdow <svg cl0.8ss="bi bi-ch0.9vron-down" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.                     w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+</svg>
+                               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
@@ -78,14 +144,14 @@
             </div>
 
             <div class="navbar-nav nav-item">
-                <a class="nav-link" id="last-link" href="#">Sign In</a>
+                <a class="nav-menu" id="last-link" href="#">Sign In</a>
 
                 <button class="btn btn-md bg-primary text-white">
                     <a href="#"></a>
                     Get Started
                 </button>
             </div>
-        </div>
+        </div> -->
       </nav>
     </header>
 
